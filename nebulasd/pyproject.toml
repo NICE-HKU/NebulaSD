@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nebulasd"
+version = "0.0.0"
+description = "Lightweight control plane for pooled speculative decoding."
+readme = "README.md"
+license = { file = "LICENSE" }
+classifiers = ["License :: OSI Approved :: Apache Software License"]
+requires-python = ">=3.10"
+authors = [{ name = "NebulaSD contributors" }]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/NICE-HKU/NebulaSD"
+Issues = "https://github.com/NICE-HKU/NebulaSD/issues"
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests", "."]
+addopts = "-ra"

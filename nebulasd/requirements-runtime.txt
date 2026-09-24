@@ -1,0 +1,8 @@
+# Recorded GPU validation environment; install CUDA PyTorch separately first.
+triton==3.6.0
+transformers==5.12.1
+safetensors==0.8.0
+numpy==2.2.6
+ray==2.55.1
+packaging==26.3
+ninja==1.13.2

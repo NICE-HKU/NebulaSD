@@ -1,0 +1,78 @@
+# Public repository scope: two maintained projects and release metadata.
+# New top-level experiments, datasets and development notes stay local by default.
+/*
+!/.gitignore
+!/README.md
+!/LICENSE
+!/LICENSE.md
+!/NOTICE
+!/THIRD_PARTY_NOTICES.md
+!/nebulasd/
+!/swiftLLM/
+
+# Keep source, tests, documentation, examples and checked calibration data.
+# Exclude generated files even when they are created inside a public project.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.venv/
+venv/
+env/
+*.egg-info/
+*.egg
+build/
+dist/
+*.so
+*.so.*
+*.dylib
+*.dll
+*.pyd
+*.o
+*.a
+
+# Local configuration and credentials.
+.vscode/
+.idea/
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Model weights and generated run data are not source dependencies.
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.onnx
+pytorch_model*.bin
+outputs/
+results/
+*.log
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# GPU profiling captures and generated Worker traces.
+*.nsys-rep
+*.qdstrm
+*.ncu-rep
+*.nvvp
+nsys*.sqlite
+timeline.sqlite
+worker-*-trace.json
+trace-worker-*.json
+cuda-worker-*.json
+latency-worker-*.json
+copy-tickets.json
+migration-chains.json
+dispatch-spans.json
+
+# Superseded development archives are not part of the public source tree.
+/nebulasd/docs/history/
+/nebulasd/tests/archive/
